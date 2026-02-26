@@ -1,0 +1,20 @@
+// Prisma schema with SQLite: data is stored in a local file (e.g. prisma/dev.db).
+// No external database server required.
+// https://www.prisma.io/docs/orm/overview/databases/sqlite
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model GroceryItem {
+  id        String   @id @default(cuid())
+  name      String
+  quantity  Int      @default(1)
+  checked   Boolean  @default(false)
+  createdAt DateTime @default(now())
+}
