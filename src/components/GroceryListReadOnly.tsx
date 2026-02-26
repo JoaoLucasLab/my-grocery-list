@@ -11,8 +11,8 @@ type GroceryListReadOnlyProps = {
 export function GroceryListReadOnly({ items, onToggleChecked }: GroceryListReadOnlyProps) {
   if (items.length === 0) {
     return (
-      <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50/50 py-12 text-center dark:border-slate-600 dark:bg-slate-700/20">
-        <p className="text-slate-500 dark:text-slate-400">This list is empty.</p>
+      <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50/50 py-12 text-center">
+        <p className="text-slate-500">This list is empty.</p>
       </div>
     );
   }
@@ -22,7 +22,7 @@ export function GroceryListReadOnly({ items, onToggleChecked }: GroceryListReadO
       {items.map((item) => (
         <li
           key={item.id}
-          className={`flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 py-3 px-4 dark:border-slate-600/80 dark:bg-slate-700/30 ${
+          className={`flex items-center gap-3 rounded-xl border border-slate-200/80 bg-slate-50/50 py-3 px-4 ${
             item.checked ? "opacity-75" : ""
           }`}
         >
@@ -31,12 +31,12 @@ export function GroceryListReadOnly({ items, onToggleChecked }: GroceryListReadO
               type="checkbox"
               checked={item.checked}
               onChange={() => onToggleChecked(item.id)}
-              className="h-5 w-5 shrink-0 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500 dark:border-slate-500 dark:bg-slate-700"
+              className="h-5 w-5 shrink-0 rounded border-slate-300 text-emerald-600 focus:ring-emerald-500"
               aria-label={`Mark ${item.name} as ${item.checked ? "pending" : "bought"}`}
             />
           ) : (
             <span
-              className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 text-emerald-600 dark:border-slate-500 ${
+              className={`flex h-5 w-5 shrink-0 items-center justify-center rounded border border-slate-300 text-emerald-600 ${
                 item.checked ? "bg-emerald-500 text-white" : ""
               }`}
             >
@@ -53,7 +53,7 @@ export function GroceryListReadOnly({ items, onToggleChecked }: GroceryListReadO
           )}
           <span
             className={`min-w-0 flex-1 font-medium ${
-              item.checked ? "text-slate-500 line-through dark:text-slate-400" : "text-slate-800 dark:text-slate-100"
+              item.checked ? "text-slate-500 line-through" : "text-slate-800"
             }`}
           >
             {item.name} × {item.quantity}

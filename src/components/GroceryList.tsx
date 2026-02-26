@@ -13,8 +13,8 @@ type GroceryListProps = {
 export function GroceryList({ items, onToggleChecked, onUpdate, onRemove }: GroceryListProps) {
   if (items.length === 0) {
     return (
-      <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50/50 py-12 text-center dark:border-slate-600 dark:bg-slate-700/20">
-        <p className="text-slate-500 dark:text-slate-400">No items yet. Add one above.</p>
+      <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50/50 py-12 text-center">
+        <p className="text-slate-500">No items yet. Add one above.</p>
       </div>
     );
   }

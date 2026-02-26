@@ -9,23 +9,23 @@ type HeaderProps = {
 
 export function Header({ showShare = true }: HeaderProps) {
   return (
-    <header className="border-b border-emerald-200/60 bg-white shadow-sm dark:border-emerald-900/40 dark:bg-slate-900">
+    <header className="border-b border-emerald-200/60 bg-white shadow-sm">
       <div className="mx-auto flex max-w-2xl items-center justify-between gap-3 px-4 py-4">
         <Link href="/" className="flex items-center gap-3">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-500 text-white shadow-md">
             <LogoIcon />
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-tight text-slate-800 dark:text-slate-100">
+            <h1 className="text-xl font-bold tracking-tight text-slate-800">
               Grocery list
             </h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400">
+            <p className="text-xs text-slate-500">
               Plan your shopping
             </p>
           </div>
         </Link>
         {showShare && (
-          <ShareButton className="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-800 transition hover:bg-emerald-100 dark:border-emerald-800 dark:bg-emerald-900/30 dark:text-emerald-200 dark:hover:bg-emerald-900/50" />
+          <ShareButton className="flex items-center gap-2 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-2 text-sm font-medium text-emerald-800 transition hover:bg-emerald-100" />
         )}
       </div>
     </header>

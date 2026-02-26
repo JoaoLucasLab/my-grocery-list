@@ -40,12 +40,12 @@ export function ShareButton({ className }: ShareButtonProps) {
         </span>
       )}
       {status === "copied" && (
-        <span className="flex items-center gap-2 text-emerald-600 dark:text-emerald-400">
+        <span className="flex items-center gap-2 text-emerald-600">
           <CheckIcon /> Link copied!
         </span>
       )}
       {status === "error" && (
-        <span className="text-red-600 dark:text-red-400">Failed. Try again.</span>
+        <span className="text-red-600">Failed. Try again.</span>
       )}
       {status === "idle" && (
         <span className="flex items-center gap-2">
