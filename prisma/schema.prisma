@@ -18,3 +18,9 @@ model GroceryItem {
   checked   Boolean  @default(false)
   createdAt DateTime @default(now())
 }
+
+model ShareLink {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  createdAt DateTime @default(now())
+}
